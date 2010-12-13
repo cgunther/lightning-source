@@ -10,6 +10,7 @@ end
 require 'rake'
 
 require 'jeweler'
+require './lib/lightning-source/version.rb'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "lightning-source"
@@ -19,6 +20,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{A simple wrapper for Lightning Source's Drop Ship Integration}
   gem.email = "chris@chrisgunther.net"
   gem.authors = ["Chris Gunther"]
+  gem.version = LightningSource::Version::STRING
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
