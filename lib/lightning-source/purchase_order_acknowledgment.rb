@@ -1,5 +1,5 @@
 module LightningSource
-  class PurchaseOrderAcknowledgment
+  class PurchaseOrderAcknowledgment < Base
     
     attr_accessor :client_identification, :batch_id, :batch_date, :batch_time
     
@@ -60,22 +60,6 @@ module LightningSource
     end
     
   private
-  
-    def parse_numeric(string)
-      string.to_i
-    end
-    
-    def parse_date(string)
-      Date.parse(string)
-    end
-    
-    def parse_time(string)
-      string.gsub(/(\d{2})(\d{2})(\d{2})/, '\1:\2:\3')
-    end
-    
-    def parse_string(string)
-      string.strip
-    end
   
     def parse_batch_header(raw_data)
       self.client_identification = raw_data[5..10]
